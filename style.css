@@ -144,7 +144,7 @@ h1 .highlight {
 .languages-scroll {
     display: flex;
     gap: 20px;
-    animation: scroll 30s linear infinite;
+    animation: scroll 60s linear infinite;
     width: fit-content;
 }
 
