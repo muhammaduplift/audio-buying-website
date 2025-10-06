@@ -115,6 +115,11 @@ h1 .highlight {
     margin-top: 40px;
     overflow: hidden;
     padding: 25px 0;
+    background: #F5F5F4;
+    margin-left: -60px;
+    margin-right: -60px;
+    margin-bottom: -50px;
+    border-radius: 0 0 30px 30px;
 }
 
 .languages-scroll {
@@ -135,7 +140,7 @@ h1 .highlight {
 
 .language-tag {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.9);
+    color: #666;
     font-size: 1.1rem;
     font-weight: 400;
     white-space: nowrap;
