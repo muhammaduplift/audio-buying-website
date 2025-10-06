@@ -10,6 +10,12 @@
 </head>
 <body>
     <div class="hero">
+        <div class="language-selector">
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ur">اردو</option>
+            </select>
+        </div>
         <div class="hero-content">
             <div class="hero-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
@@ -194,5 +200,13 @@
             <p>&copy; 2025 Your Language. All rights reserved. <a href="terms.html">Terms</a> <a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            // Language switching functionality - to be implemented
+            console.log('Language changed to:', lang);
+            // You can add actual translation logic here later
+        }
+    </script>
 </body>
 </html>
