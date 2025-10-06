@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #22c55e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 20px 10px;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.hero-content {
+    background: white;
+    border-radius: 30px;
+    padding: 60px 60px 50px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.hero-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: #22c55e;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 45px 0;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefit svg {
+    color: #22c55e;
+    flex-shrink: 0;
+}
+
+.benefit span {
+    font-weight: 600;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #22c55e;
+    color: white;
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 30px auto 0;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.cta-button:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.languages-container {
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 25px 0;
+}
+
+.languages-scroll {
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.language-tag {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .hero-content {
+        padding: 40px 30px 35px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .subheading {
+        font-size: 1.05rem;
+        margin-bottom: 35px;
+    }
+
+    .benefits {
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit {
+        gap: 10px;
+    }
+
+    .benefit svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .benefit span {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 16px 35px;
+    }
+
+    .language-tag {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 35px 25px 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .subheading {
+        font-size: 0.95rem;
+    }
+
+    .benefits {
+        gap: 20px;
+    }
+
+    .benefit svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .benefit span {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 15px 30px;
+        width: 100%;
+    }
+
+    .language-tag {
+        font-size: 0.95rem;
+    }
+}
