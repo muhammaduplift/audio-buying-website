@@ -65,6 +65,7 @@ h1 {
     color: #000;
     margin-bottom: 25px;
     line-height: 1.2;
+    letter-spacing: -0.05em;
 }
 
 h1 .highlight {
@@ -118,7 +119,7 @@ h1 .highlight {
     border-radius: 12px;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin: 30px auto 0;
     transition: all 0.2s ease;
     box-shadow: 0 4px 15px rgba(37, 131, 43, 0.3);
