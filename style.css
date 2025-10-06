@@ -139,6 +139,7 @@ h1 .highlight {
     font-size: 0.95rem;
     font-weight: 500;
     white-space: nowrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Mobile Responsive */
