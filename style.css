@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: #22c55e;
+    background: #25832B;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-    color: #22c55e;
+    color: #25832B;
 }
 
 h1 {
@@ -45,7 +45,7 @@ h1 {
 }
 
 h1 .highlight {
-    color: #22c55e;
+    color: #25832B;
 }
 
 .subheading {
@@ -74,7 +74,7 @@ h1 .highlight {
 }
 
 .benefit svg {
-    color: #22c55e;
+    color: #25832B;
     flex-shrink: 0;
 }
 
@@ -89,7 +89,7 @@ h1 .highlight {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: #22c55e;
+    background: #25832B;
     color: white;
     padding: 18px 45px;
     border-radius: 50px;
@@ -98,13 +98,13 @@ h1 .highlight {
     font-weight: 700;
     margin: 30px auto 0;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 131, 43, 0.3);
 }
 
 .cta-button:hover {
-    background: #16a34a;
+    background: #1d6722;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+    box-shadow: 0 6px 20px rgba(37, 131, 43, 0.4);
 }
 
 .cta-button:active {
@@ -248,7 +248,7 @@ h1 .highlight {
 }
 
 .footer-content a {
-    color: #22c55e;
+    color: #25832B;
     text-decoration: none;
     margin-left: 15px;
     transition: color 0.2s ease;
