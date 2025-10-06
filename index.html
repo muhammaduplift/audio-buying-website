@@ -203,25 +203,34 @@
 
     <script>
         function changeLanguage(lang) {
-            const elements = document.querySelectorAll('[data-en]');
             const isUrdu = lang === 'ur';
 
-            elements.forEach(element => {
-                const text = isUrdu ? element.getAttribute('data-ur') : element.getAttribute('data-en');
-                element.innerHTML = text;
+            // Only translate specific content elements, not countries
+            const h1 = document.querySelector('h1');
+            const subheading = document.querySelector('.subheading');
+            const benefits = document.querySelectorAll('.benefit span');
+            const ctaButton = document.querySelector('.cta-button');
+
+            if (h1) {
+                h1.innerHTML = isUrdu ? h1.getAttribute('data-ur') : h1.getAttribute('data-en');
+            }
+            if (subheading) {
+                subheading.innerHTML = isUrdu ? subheading.getAttribute('data-ur') : subheading.getAttribute('data-en');
+            }
+            if (ctaButton) {
+                const buttonText = isUrdu ? ctaButton.getAttribute('data-ur') : ctaButton.getAttribute('data-en');
+                // Keep the SVG icon, only change text
+                ctaButton.innerHTML = ctaButton.querySelector('svg').outerHTML + ' ' + buttonText;
+            }
+
+            benefits.forEach(benefit => {
+                benefit.textContent = isUrdu ? benefit.getAttribute('data-ur') : benefit.getAttribute('data-en');
             });
 
-            // Change text direction for Urdu
-            document.body.style.direction = isUrdu ? 'rtl' : 'ltr';
-
-            // Adjust language selector position for RTL
-            const selector = document.querySelector('.language-selector');
-            if (isUrdu) {
-                selector.style.left = '20px';
-                selector.style.right = 'auto';
-            } else {
-                selector.style.right = '20px';
-                selector.style.left = 'auto';
+            // Change text direction for main content only
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.direction = isUrdu ? 'rtl' : 'ltr';
             }
         }
     </script>
