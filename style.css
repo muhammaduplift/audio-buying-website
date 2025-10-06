@@ -24,7 +24,7 @@ body {
 .hero-content {
     background: white;
     border-radius: 30px;
-    padding: 60px 40px 50px;
+    padding: 60px 30px 50px;
     text-align: center;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
@@ -136,8 +136,8 @@ h1 .highlight {
 .language-tag {
     display: inline-block;
     color: #666;
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: 0.95rem;
+    font-weight: 500;
     white-space: nowrap;
 }
 
