@@ -23,10 +23,6 @@ body {
 
 .hero-content {
     background: white;
-    background-image: url('world-map.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 90%;
     border-radius: 30px;
     padding: 60px 30px 50px;
     text-align: center;
