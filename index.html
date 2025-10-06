@@ -10,22 +10,22 @@
 </head>
 <body>
     <div class="hero">
-        <div class="language-selector">
-            <select id="languageSelect" onchange="changeLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="ur">اردو</option>
-            </select>
-        </div>
         <div class="hero-content">
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="ur">اردو</option>
+                </select>
+            </div>
             <div class="hero-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
             </div>
 
-            <h1>Teach AI to speak <span class="highlight">your language</span>.</h1>
-            <p class="subheading">
-                In just 10 minutes, contribute your voice and enable AI to speak and understand your language. Make education, healthcare, banking, and all benefits of AI accessible to your community.<br>Get paid for your effort!
+            <h1 data-en="Teach AI to speak <span class='highlight'>your language</span>." data-ur="AI کو <span class='highlight'>اپنی زبان</span> بولنا سکھائیں۔">Teach AI to speak <span class="highlight">your language</span>.</h1>
+            <p class="subheading" data-en="In just 10 minutes, contribute your voice and enable AI to speak and understand your language. Make education, healthcare, banking, and all benefits of AI accessible to your community." data-ur="صرف 10 منٹ میں، اپنی آواز کا تعاون کریں اور AI کو اپنی زبان بولنے اور سمجھنے کے قابل بنائیں۔ تعلیم، صحت، بینکنگ، اور AI کے تمام فوائد کو اپنی کمیونٹی کے لیے قابل رسائی بنائیں۔">
+                In just 10 minutes, contribute your voice and enable AI to speak and understand your language. Make education, healthcare, banking, and all benefits of AI accessible to your community.
             </p>
 
             <div class="benefits">
@@ -34,24 +34,24 @@
                         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
                         <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
                     </svg>
-                    <span>Just 10 minutes</span>
+                    <span data-en="Just 10 minutes" data-ur="صرف 10 منٹ">Just 10 minutes</span>
                 </div>
                 <div class="benefit">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
                         <circle cx="12" cy="12" r="10"/>
                         <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold" fill="white">$</text>
                     </svg>
-                    <span>Get paid for your efforts</span>
+                    <span data-en="Get paid for your efforts" data-ur="اپنی کوششوں کے لیے معاوضہ حاصل کریں">Get paid for your efforts</span>
                 </div>
                 <div class="benefit">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
                         <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
                     </svg>
-                    <span>Teach your language</span>
+                    <span data-en="Teach your language" data-ur="اپنی زبان سکھائیں">Teach your language</span>
                 </div>
             </div>
 
-            <a href="https://github.com/muhammaduplift/audio-buying-website/releases/latest/download/app.apk" class="cta-button" download>
+            <a href="https://github.com/muhammaduplift/audio-buying-website/releases/latest/download/app.apk" class="cta-button" download data-en="Download App" data-ur="ایپ ڈاؤن لوڈ کریں">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
                     <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                 </svg>
@@ -203,9 +203,26 @@
 
     <script>
         function changeLanguage(lang) {
-            // Language switching functionality - to be implemented
-            console.log('Language changed to:', lang);
-            // You can add actual translation logic here later
+            const elements = document.querySelectorAll('[data-en]');
+            const isUrdu = lang === 'ur';
+
+            elements.forEach(element => {
+                const text = isUrdu ? element.getAttribute('data-ur') : element.getAttribute('data-en');
+                element.innerHTML = text;
+            });
+
+            // Change text direction for Urdu
+            document.body.style.direction = isUrdu ? 'rtl' : 'ltr';
+
+            // Adjust language selector position for RTL
+            const selector = document.querySelector('.language-selector');
+            if (isUrdu) {
+                selector.style.left = '20px';
+                selector.style.right = 'auto';
+            } else {
+                selector.style.right = '20px';
+                selector.style.left = 'auto';
+            }
         }
     </script>
 </body>

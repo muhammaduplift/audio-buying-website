@@ -45,7 +45,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 90%;
-    opacity: 0.5;
+    opacity: 0.08;
     border-radius: 30px;
     pointer-events: none;
     z-index: 0;
@@ -294,8 +294,8 @@ h1 .highlight {
 /* Language Selector */
 .language-selector {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     z-index: 10;
 }
 
