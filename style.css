@@ -44,12 +44,16 @@ h1 {
     line-height: 1.2;
 }
 
+h1 .highlight {
+    color: #22c55e;
+}
+
 .subheading {
-    font-size: 1.2rem;
-    color: #000;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    line-height: 1.7;
     margin-bottom: 40px;
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     font-weight: 400;
@@ -239,31 +243,17 @@ h1 {
 
 .footer-content p {
     color: #666;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
+    margin: 0;
+    font-size: 0.9rem;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
+.footer-content a {
     color: #22c55e;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
+    margin-left: 15px;
     transition: color 0.2s ease;
 }
 
-.footer-links a:hover {
-    color: #16a34a;
+.footer-content a:hover {
     text-decoration: underline;
-}
-
-.footer-links .separator {
-    color: #ccc;
 }
